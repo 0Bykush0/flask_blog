@@ -1,0 +1,22 @@
+<!-- @format -->
+
+{% extends 'layout.html'%} {% block body %}
+<h1>About Me</h1>
+<embed
+  src="{{url_for('static', filename='cv.pdf')}}"
+  width="1000"
+  height="1050"
+  type="application/pdf"
+/>
+<div>
+  <h2>For more</h2>
+  <a href="https://www.linkedin.com/in/abdullah-erdem-özbaykuş-4047a8196/">
+    <img
+      src="{{url_for('static', filename='linkedin.png')}}"
+      height="50"
+      width="50"
+    />
+  </a>
+</div>
+
+{% endblock %}
