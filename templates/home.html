@@ -1,11 +1,47 @@
 <!-- @format -->
 
 {% extends 'layout.html' %} {% block body %}
-<div class="jumbtron text-center">
-  <h1>Welcome To BlogIt!</h1>
-  <p class="lead">
-    This is a blog application built on the Python Flask Framework and users can
-    upload articles.
-  </p>
+<div class="row text-center ">
+    <h1>Welcome To BlogIt!</h1>
+    <hr>
+    <div class="col-sm-7">
+        <form>
+            <div class="row">
+                <div class="mb-3 col-sm-6 singUpForm">
+                    <label for="InputName" class="form-label">Name Surname</label>
+                    <input type="text" class="form-control" id="InputName">
+                </div>
+                <div class="mb-3 col-sm-6 singUpForm">
+                    <label for="InputUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="InputUsername">
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-sm-6 singUpForm">
+                    <label for="InputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3 col-sm-6 singUpForm">
+                    <label for="InputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="InputPassword">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Sign up</button>
+        </form>
+    </div>
+    <div class="col-sm-1 vertical-divider"></div>
+    <div class="col-sm-3">
+        <form method="post">
+            <div class="singUpForm">
+                <label for="SingUpUsername">User Name</label>
+                <input id="SingUpUsername" type="text" class="form-control">
+            </div>
+            <div class="singUpForm">
+                <label for="SingUpPassword">Password</label>
+                <input id="SingUpPassword" type="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-warning">Sign in</button>
+        </form>
+    </div>
 </div>
 {% endblock %}
