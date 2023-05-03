@@ -1,0 +1,17 @@
+{% extends 'layout.html' %} {% block body %}
+<h2>Log In</h2>
+<hr>
+<div class="col-sm-3">
+    <form action="/login" method="post">
+        <div class="singUpForm">
+            <label for="SingUpUsername">User Name</label>
+            <input name="username" id="SingUpUsername" type="text" class="form-control">
+        </div>
+        <div class="singUpForm">
+            <label for="SingUpPassword">Password</label>
+            <input name="password" id="SingUpPassword" type="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-warning">Log in</button>
+    </form>
+</div>
+{% endblock %}
